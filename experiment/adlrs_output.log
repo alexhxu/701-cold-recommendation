@@ -1,0 +1,152 @@
+=== Hyperparameters chosen for training ===
+Latent dimensions (for Deep Autoencoder): 20
+Number of layers for Deep Autoencoder: 4
+DAE epochs: 20
+MF learning rate: 1e-3
+MF SGD momentum: 0.9
+Beta (regularization penalty): 0.01
+z for dynamic gamma: 5.0
+k for most similar items in item profile vectors: 3
+Batch size: 64
+MF Epochs: 40
+
+=== Evaluating on Test Set ===
+Test samples after filtering: 200016
+
+Test MAE: 0.6772
+Test RMSE: 0.8594
+
+=== Evaluating on All Dataset ===
+Full data samples after filtering: 1000183
+
+Full dataset MAE: 0.6200
+Full dataset RMSE: 0.7861
+
+=== Evaluating Cold Items ===
+Cold items count: 572
+Cold items MAE: 0.7527
+Cold items RMSE: 0.9238
+
+=== Evaluating Heavy Items ===
+Heavy items count: 940925
+Heavy items MAE: 0.6155
+Heavy items RMSE: 0.7811
+
+=== Evaluating Controversial Items ===
+Controversial items count: 237
+Controversial items MAE: 1.1185
+Controversial items RMSE: 1.2688
+
+=== Evaluating HR@10 on Full Dataset ===
+HR@10 Results:
+  Users evaluated: 6038
+  Hits: 3440
+  HR@10: 0.5697
+Final HR@10: 0.5697
+
+=== Top-N Recommendation Example ===
+Sample user ID: 5412
+
+Top 10 recommendations:
+1. The Matrix (1999) (score: 5.59)
+2. Star Wars: Episode IV - A New Hope (1977) (score: 5.16)
+3. The Wrong Trousers (1993) (score: 5.15)
+4. A Close Shave (1995) (score: 5.12)
+5. The Usual Suspects (1995) (score: 5.05)
+6. The Princess Bride (1987) (score: 5.02)
+7. Blade Runner (1982) (score: 4.97)
+8. Seven Samurai (The Magnificent Seven) (Shichinin no samurai) (1954) (score: 4.93)
+9. Star Wars: Episode V - The Empire Strikes Back (1980) (score: 4.92)
+10. Raiders of the Lost Ark (1981) (score: 4.91)
+
+=== 40 Epoch Loss Changes ===
+=== Step 4: Training Matrix Factorization ===
+100%|██████████| 12503/12503 [00:36<00:00, 345.22it/s]
+Epoch 01 | loss = 274.8907
+100%|██████████| 12503/12503 [00:35<00:00, 347.68it/s]
+Epoch 02 | loss = 40.3677
+100%|██████████| 12503/12503 [00:35<00:00, 350.93it/s]
+Epoch 03 | loss = 34.0535
+100%|██████████| 12503/12503 [00:35<00:00, 351.08it/s]
+Epoch 04 | loss = 32.8559
+100%|██████████| 12503/12503 [00:35<00:00, 349.83it/s]
+Epoch 05 | loss = 32.4008
+100%|██████████| 12503/12503 [00:35<00:00, 349.68it/s]
+Epoch 06 | loss = 32.1054
+100%|██████████| 12503/12503 [00:35<00:00, 348.72it/s]
+Epoch 07 | loss = 31.7649
+100%|██████████| 12503/12503 [00:35<00:00, 351.32it/s]
+Epoch 08 | loss = 31.4211
+100%|██████████| 12503/12503 [00:35<00:00, 352.58it/s]
+Epoch 09 | loss = 31.1280
+100%|██████████| 12503/12503 [00:35<00:00, 353.18it/s]
+Epoch 10 | loss = 30.8599
+100%|██████████| 12503/12503 [00:35<00:00, 352.34it/s]
+Epoch 11 | loss = 30.6012
+100%|██████████| 12503/12503 [00:35<00:00, 353.15it/s]
+Epoch 12 | loss = 30.3838
+100%|██████████| 12503/12503 [00:35<00:00, 354.95it/s]
+Epoch 13 | loss = 30.1744
+100%|██████████| 12503/12503 [00:35<00:00, 355.25it/s]
+Epoch 14 | loss = 29.9943
+100%|██████████| 12503/12503 [00:35<00:00, 351.48it/s]
+Epoch 15 | loss = 29.8231
+100%|██████████| 12503/12503 [00:35<00:00, 349.51it/s]
+Epoch 16 | loss = 29.6769
+100%|██████████| 12503/12503 [00:35<00:00, 351.14it/s]
+Epoch 17 | loss = 29.5286
+100%|██████████| 12503/12503 [00:35<00:00, 350.56it/s]
+Epoch 18 | loss = 29.3939
+100%|██████████| 12503/12503 [00:35<00:00, 351.88it/s]
+Epoch 19 | loss = 29.2720
+100%|██████████| 12503/12503 [00:35<00:00, 352.66it/s]
+Epoch 20 | loss = 29.1443
+100%|██████████| 12503/12503 [00:35<00:00, 353.09it/s]
+Epoch 21 | loss = 29.0319
+100%|██████████| 12503/12503 [00:35<00:00, 353.12it/s]
+Epoch 22 | loss = 28.9160
+100%|██████████| 12503/12503 [00:35<00:00, 353.24it/s]
+Epoch 23 | loss = 28.8170
+100%|██████████| 12503/12503 [00:35<00:00, 351.36it/s]
+Epoch 24 | loss = 28.7090
+100%|██████████| 12503/12503 [00:35<00:00, 353.23it/s]
+Epoch 25 | loss = 28.6072
+100%|██████████| 12503/12503 [00:35<00:00, 355.51it/s]
+Epoch 26 | loss = 28.5014
+100%|██████████| 12503/12503 [00:35<00:00, 352.03it/s]
+Epoch 27 | loss = 28.4188
+100%|██████████| 12503/12503 [00:35<00:00, 352.92it/s]
+Epoch 28 | loss = 28.3305
+100%|██████████| 12503/12503 [00:35<00:00, 353.95it/s]
+Epoch 29 | loss = 28.2474
+100%|██████████| 12503/12503 [00:35<00:00, 352.40it/s]
+Epoch 30 | loss = 28.1743
+100%|██████████| 12503/12503 [00:35<00:00, 351.76it/s]
+Epoch 31 | loss = 28.0968
+100%|██████████| 12503/12503 [00:35<00:00, 352.46it/s]
+Epoch 32 | loss = 28.0261
+100%|██████████| 12503/12503 [00:35<00:00, 350.70it/s]
+Epoch 33 | loss = 27.9614
+100%|██████████| 12503/12503 [00:35<00:00, 354.03it/s]
+Epoch 34 | loss = 27.9009
+100%|██████████| 12503/12503 [00:35<00:00, 352.55it/s]
+Epoch 35 | loss = 27.8473
+100%|██████████| 12503/12503 [00:35<00:00, 352.66it/s]
+Epoch 36 | loss = 27.7966
+100%|██████████| 12503/12503 [00:35<00:00, 355.74it/s]
+Epoch 37 | loss = 27.7435
+100%|██████████| 12503/12503 [00:35<00:00, 354.51it/s]
+Epoch 38 | loss = 27.6982
+100%|██████████| 12503/12503 [00:35<00:00, 352.90it/s]
+Epoch 39 | loss = 27.6537
+100%|██████████| 12503/12503 [00:35<00:00, 351.28it/s]
+Epoch 40 | loss = 27.6126
+MF time: 1420.8s
+Model was ran on T4GPU on Google Colab
+
+=== Dataset Statistics ===
+Loaded 1000209 ratings
+Loaded 3883 item profiles
+Training samples: 800167
+Test samples: 200042
+Users: 6040, Items: 3683, Ratings: 800167
