@@ -903,7 +903,7 @@ def evaluate_HR_at_10(model, test_users, test_items, test_ratings,
             continue
         users_evaluated += 1
         exclude = user_train_items.get(user, set())
-        candidate = [item for item in valid_items if item not in exclude]
+        candidate = [item for item in valid if item not in exclude]
 
         if len(candidate) == 0:
             continue
@@ -916,12 +916,12 @@ def evaluate_HR_at_10(model, test_users, test_items, test_ratings,
 
         if isinstance(predictions, torch.Tensor):
             predictions = predictions.detach().cpu().numpy()
-        scores[user] = {item: float(score) for item, score in zip(candidate_items, predictions)}
+        scores[user] = {item: float(score) for item, score in zip(candidate, predictions)}
         ground_truth = user_test_items[user]
 
         ranked = sorted(scores[user].items(), key=lambda x: x[1], reverse=True)
-        top_N = [item for item, _ in ranked[:N]]
-        if any(item in top_N for item in ground_truth):
+        top_10 = [item for item, _ in ranked[:10]]
+        if any(item in top_10 for item in ground_truth):
             hits += 1
     if users_evaluated == 0:
         hr = 0.0
